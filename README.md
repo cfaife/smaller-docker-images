@@ -26,6 +26,13 @@ To ensure the portability of the binary we disabled CGO by setting it to zero `C
     docker image build -t my-image-alpine -f Dockerfile.alpine .
 
 
+### Simplifying the process via script
+
+There a shellscript named run.sh, which you can use to spin up everything all at once.
+
+WARNING: This will remove the all previous created contianers  and images
+
+
 # Result
 
 At the time that I built the images this was the outcome.
