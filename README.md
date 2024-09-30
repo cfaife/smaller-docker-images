@@ -51,6 +51,14 @@ Your containers might not function as expected, consider restarting the `docker`
 
     systemctl restart docker
 
+# Testing
+
+Based on spinned up containers deployed via `run.sh` script, we can now curl to our services and expect the response from them, like `{healthy: true}`.
+
+    curl -v http://localhost:8082/
+
+
+    curl -v http://localhost:8081/
 
 
 
