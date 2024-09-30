@@ -1,8 +1,8 @@
 # Description
 
-This small project aims to build a simple GO application using two approaches of base images: `alpine` and `scratch`.
+This small project aims to build a simple `Go` application using two approaches of base images: `alpine` and `scratch`.
 
-One thing to notice is that, for **scratch** images you have to put everything on your own, because it comes empty without any utilitary binary. It wpuld be suitible for use cases where you  need a very tiny sized *Docker* image, for instance you can **NOT** *exec* into your `scratch` running container. `Alpine` images on the other end are bigger than `scracth` images because they have binaries other than your application binary, with that said you can for instance *exec* into it, because OS linux basic binaries comes out of the box. 
+One thing to notice is that, for **scratch** images you have to put everything on your own, because it comes empty without any utilitary binary. It would be suitible for use cases where you  need a very tiny sized *Docker* image, for instance you can **NOT** *exec* into your `scratch` running container. `Alpine` images on the other end are bigger than `scracth` images because they have binaries other than your application binary, with that said you can for instance *exec* into it, because OS linux basic binaries comes out of the box. 
 
 # How to
 
@@ -28,18 +28,18 @@ To ensure the portability of the binary we disabled CGO by setting it to zero `C
 
 ### Simplifying the process via script
 
-There a shellscript named run.sh, which you can use to spin up everything all at once.
+There is a shellscript named `run.sh`, which you can use to spin up everything at once.
 
-WARNING: This will remove the all previous created contianers  and images
+**WARNING:** *This will remove the all previous created docker contianers and docker images*
 
 
 # Result
 
-At the time that I built the images this was the outcome.
+At the time that I building the images this was the outcome.
 
 ![result!](image.png "Result")
 
-With this it can be assumed that `scratch` images have less than 1MB, since our application binary is arround 6.6MB of size. And you can guess the size of the isolated `alpine` image based on this hypothetical math.
+With this, it can be assumed that `scratch` images have less than 1MB, since the `Golang` application binary is arround 6.6MB of size. And you can guess the size of the isolated `alpine` image based on this hypothetical math.
 
 Check the image below for cleared details:
 
