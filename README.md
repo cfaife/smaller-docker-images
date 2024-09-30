@@ -38,6 +38,12 @@ Check the image below for cleared details:
 
 ![Project file sizes!](image2.png "Project file sizes")
 
+# TIP
+
+Your containers might not function as expected, consider restarting the `docker` service on your host:
+
+    systemctl restart docker
+
 
 
 
